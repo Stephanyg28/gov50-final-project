@@ -115,7 +115,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["index_files/anchor-4.2.2/anchor.min.js","index_files/bowser-1.9.3/bowser.min.js","index_files/distill-2.2.21/template.v2.js","index_files/header-attrs-2.16/header-attrs.js","index_files/header-attrs-2.17/header-attrs.js","index_files/jquery-3.6.0/jquery-3.6.0.js","index_files/jquery-3.6.0/jquery-3.6.0.min.js","index_files/jquery-3.6.0/jquery-3.6.0.min.map","index_files/popper-2.6.0/popper.min.js","index_files/tippy-6.2.7/tippy-bundle.umd.min.js","index_files/tippy-6.2.7/tippy-light-border.css","index_files/tippy-6.2.7/tippy.css","index_files/tippy-6.2.7/tippy.umd.min.js","index_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["data/drug-use-by-age.csv","data/README.md","index_files/anchor-4.2.2/anchor.min.js","index_files/bowser-1.9.3/bowser.min.js","index_files/distill-2.2.21/template.v2.js","index_files/header-attrs-2.16/header-attrs.js","index_files/header-attrs-2.17/header-attrs.js","index_files/jquery-3.6.0/jquery-3.6.0.js","index_files/jquery-3.6.0/jquery-3.6.0.min.js","index_files/jquery-3.6.0/jquery-3.6.0.min.map","index_files/popper-2.6.0/popper.min.js","index_files/tippy-6.2.7/tippy-bundle.umd.min.js","index_files/tippy-6.2.7/tippy-light-border.css","index_files/tippy-6.2.7/tippy.css","index_files/tippy-6.2.7/tippy.umd.min.js","index_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -1520,7 +1520,159 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <h2 id="project-thoughts">Project thoughts</h2>
 <p>I am interested in exploring data related to how the skin color of Latines impacts their opportunities in America and shapes their daily lives.</p>
 <p>In this study, I plan to examine the extent to which skin tone of Latines impacts their daily lives and therefore opportunities in the United States. I hypothesize that Latines with darker skin tones are more likely to be discriminated in comparison to their lighter skin toned peers and are given less opportunities. For latines with lighter skin tones, I expect that they are given more opportunities and experience less discrimination. I also expect that Spanish-dominant speakers to be more discriminated than their English-dominant or bilingual-dominant counter parts. Skin color is self-assessed based on a 10-step scale, ranging from lightest (1) to darkest (10). Latinos with lighter skin color or Latinos with lighter skin selected 1-4 on the scale while Latinos with darker skin color or Latinos with darker skin selected 5-10. Generation of arrival, first, second, and third as well as language dominance are also variables. If I observe greater discrimination for darker toned latines (5-10), this would provide support for my hypothesis. If, on the other hand, I observe less discrimination or the same level of discrimination for darker toned latines, this would provide evidence against my hypothesis.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 75%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Header</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>alcohol-use</code></td>
+<td>Percentage of those in an age group who used alcohol in the past 12 months</td>
+</tr>
+<tr class="even">
+<td><code>alcohol-frequency</code></td>
+<td>Median number of times a user in an age group used alcohol in the past 12 months</td>
+</tr>
+<tr class="odd">
+<td><code>marijuana-use</code></td>
+<td>Percentage of those in an age group who used marijuana in the past 12 months</td>
+</tr>
+<tr class="even">
+<td><code>marijuana-frequency</code></td>
+<td>Median number of times a user in an age group used marijuana in the past 12 months</td>
+</tr>
+<tr class="odd">
+<td><code>cocaine-use</code></td>
+<td>Percentage of those in an age group who used cocaine in the past 12 months</td>
+</tr>
+<tr class="even">
+<td><code>cocaine-frequency</code></td>
+<td>Median number of times a user in an age group used cocaine in the past 12 months</td>
+</tr>
+<tr class="odd">
+<td><code>crack-use</code></td>
+<td>Percentage of those in an age group who used crack in the past 12 months</td>
+</tr>
+<tr class="even">
+<td><code>crack-frequency</code></td>
+<td>Median number of times a user in an age group used crack in the past 12 months</td>
+</tr>
+<tr class="odd">
+<td><code>heroin-use</code></td>
+<td>Percentage of those in an age group who used heroin in the past 12 months</td>
+</tr>
+<tr class="even">
+<td><code>heroin-frequency</code></td>
+<td>Median number of times a user in an age group used heroin in the past 12 months</td>
+</tr>
+<tr class="odd">
+<td><code>hallucinogen-use</code></td>
+<td>Percentage of those in an age group who used hallucinogens in the past 12 months</td>
+</tr>
+<tr class="even">
+<td><code>hallucinogen-frequency</code></td>
+<td>Median number of times a user in an age group used hallucinogens in the past 12 months</td>
+</tr>
+<tr class="odd">
+<td><code>inhalant-use</code></td>
+<td>Percentage of those in an age group who used inhalants in the past 12 months</td>
+</tr>
+<tr class="even">
+<td><code>inhalant-frequency</code></td>
+<td>Median number of times a user in an age group used inhalants in the past 12 months</td>
+</tr>
+<tr class="odd">
+<td><code>pain-releiver-use</code></td>
+<td>Percentage of those in an age group who used pain relievers in the past 12 months</td>
+</tr>
+<tr class="even">
+<td><code>pain-releiver-frequency</code></td>
+<td>Median number of times a user in an age group used pain relievers in the past 12 months</td>
+</tr>
+<tr class="odd">
+<td><code>oxycontin-use</code></td>
+<td>Percentage of those in an age group who used oxycontin in the past 12 months</td>
+</tr>
+<tr class="even">
+<td><code>oxycontin-frequency</code></td>
+<td>Median number of times a user in an age group used oxycontin in the past 12 months</td>
+</tr>
+<tr class="odd">
+<td><code>tranquilizer-use</code></td>
+<td>Percentage of those in an age group who used tranquilizer in the past 12 months</td>
+</tr>
+<tr class="even">
+<td><code>tranquilizer-frequency</code></td>
+<td>Median number of times a user in an age group used tranquilizer in the past 12 months</td>
+</tr>
+<tr class="odd">
+<td><code>stimulant-use</code></td>
+<td>Percentage of those in an age group who used stimulants in the past 12 months</td>
+</tr>
+<tr class="even">
+<td><code>stimulant-frequency</code></td>
+<td>Median number of times a user in an age group used stimulants in the past 12 months</td>
+</tr>
+<tr class="odd">
+<td><code>meth-use</code></td>
+<td>Percentage of those in an age group who used meth in the past 12 months</td>
+</tr>
+<tr class="even">
+<td><code>meth-frequency</code></td>
+<td>Median number of times a user in an age group used meth in the past 12 months</td>
+</tr>
+<tr class="odd">
+<td><code>sedative-use</code></td>
+<td>Percentage of those in an age group who used sedatives in the past 12 months</td>
+</tr>
+<tr class="even">
+<td><code>sedative-frequency</code></td>
+<td>Median number of times a user in an age group used sedatives in the past 12 months</td>
+</tr>
+</tbody>
+</table>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://tidyverse.tidyverse.org'>tidyverse</a></span><span class='op'>)</span></span>
+<span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://dplyr.tidyverse.org'>dplyr</a></span><span class='op'>)</span></span>
+<span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://broom.tidymodels.org/'>broom</a></span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>drugs</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://readr.tidyverse.org/reference/read_delim.html'>read_csv</a></span><span class='op'>(</span><span class='st'>"data/drug-use-by-age.csv"</span><span class='op'>)</span></span>
+<span></span>
+<span></span>
+<span><span class='va'>alcohol_table</span> <span class='op'>&lt;-</span> <span class='va'>drugs</span> <span class='op'>|&gt;</span></span>
+<span><span class='fu'><a href='https://dplyr.tidyverse.org/reference/group_by.html'>group_by</a></span><span class='op'>(</span><span class='va'>`alcohol-use`</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span><span class='fu'><a href='https://dplyr.tidyverse.org/reference/summarise.html'>summarize</a></span><span class='op'>(</span>frequency_means <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>`alcohol-frequency`</span>, na.rm <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span><span class='op'>)</span></span>
+<span><span class='va'>alcohol_table</span></span></code></pre>
+</div>
+<pre><code># A tibble: 16 × 2
+   `alcohol-use` frequency_means
+           &lt;dbl&gt;           &lt;dbl&gt;
+ 1           3.9             3  
+ 2           8.5             6  
+ 3          18.1             5  
+ 4          29.2             6  
+ 5          40.1            10  
+ 6          49.3            32.5
+ 7          58.7            24  
+ 8          64.6            36  
+ 9          67.2            52  
+10          69.7            48  
+11          75              52  
+12          77.5            52  
+13          80.7            52  
+14          83.1            52  
+15          83.2            52  
+16          84.2            52  </code></pre>
+</div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>

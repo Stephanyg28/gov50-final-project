@@ -1,20 +1,8 @@
----
-title: "Gov 50 Final Project"
-author: "Stephany Gutierrez"
-description: "My final project"
-output:
-  distill::distill_article:
-    self_contained: false
----
+# Drug Use By Age
 
+This directory contains data behind the story [How Baby Boomers Get High](http://fivethirtyeight.com/datalab/how-baby-boomers-get-high/). It covers 13 drugs across 17 age groups.
 
-
-## Project thoughts
-
-I am interested in exploring data related to how the skin color of Latines impacts their opportunities in America and shapes their daily lives.
-
-In this study, I plan to examine the extent to which skin tone of Latines impacts their daily lives and therefore opportunities in the United States. I hypothesize that Latines with darker skin tones are more likely to be discriminated in comparison to their lighter skin toned peers and are given less opportunities. For latines with lighter skin tones, I expect that they are given more opportunities and experience less discrimination. I also expect that Spanish-dominant speakers to be more discriminated than their English-dominant or bilingual-dominant counter parts. Skin color is self-assessed based on a 10-step scale, ranging from lightest (1) to darkest (10). Latinos with lighter skin color or Latinos with lighter skin selected 1-4 on the scale while Latinos with darker skin color or Latinos with darker skin selected 5-10. Generation of arrival, first, second, and third as well as language dominance are also variables. If I observe greater discrimination for darker toned latines (5-10), this would provide support for my hypothesis. If, on the other hand, I observe less discrimination or the same level of discrimination for darker toned latines, this would provide evidence against my hypothesis.
-
+Source: [National Survey on Drug Use and Health from the Substance Abuse and Mental Health Data Archive](http://www.icpsr.umich.edu/icpsrweb/content/SAMHDA/index.html).
 
 Header | Definition
 ---|---------
@@ -44,20 +32,3 @@ Header | Definition
 `meth-frequency` | Median number of times a user in an age group used meth in the past 12 months
 `sedative-use` | Percentage of those in an age group who used sedatives in the past 12 months
 `sedative-frequency` | Median number of times a user in an age group used sedatives in the past 12 months
-
-
-```{r}
-library(tidyverse)
-library(dplyr)
-library(broom)
-
-drugs <- read_csv("data/drug-use-by-age.csv")
-
-
-alcohol_table <- drugs |>
-group_by(`alcohol-use`) |>
-summarize(frequency_means = mean(`alcohol-frequency`, na.rm = TRUE))
-alcohol_table
-
-```
-
