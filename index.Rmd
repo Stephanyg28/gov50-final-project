@@ -55,9 +55,8 @@ drugs <- read_csv("data/drug-use-by-age.csv")
 
 
 alcohol_table <- drugs |>
-group_by(`alcohol-use`) |>
-summarize(frequency_means = mean(`alcohol-frequency`, na.rm = TRUE))
-alcohol_table
-
+group_by(`age`) |>
+summarize(age_alc_means = mean(`alcohol-use`, na.rm = TRUE))
+knitr::kable(alcohol_table) 
 ```
 
