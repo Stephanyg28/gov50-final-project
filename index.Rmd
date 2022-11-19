@@ -53,10 +53,19 @@ library(broom)
 
 drugs <- read_csv("data/drug-use-by-age.csv")
 
+preteen_alcohol <- drugs |>
+  filter(`age`  >= 12 ) |>
+  summarize(avg_preteen_use = mean(`alcohol-use`))
+knitr::kable(preteen_alcohol) 
 
-alcohol_table <- drugs |>
-group_by(`age`) |>
-summarize(age_alc_means = mean(`alcohol-use`, na.rm = TRUE))
-knitr::kable(alcohol_table) 
+teen_alcohol <- drugs |>
+  filter(`age` >= 13 & age <= 19) |>
+  summarize(avg_teen_use = mean(`alcohol-use`))
+knitr::kable(teen_alcohol) 
+
+ate_teen_alc <- (ATE = preteen_alcohol - teen_alcohol)
+ate_teen_alc 
 ```
 
+The average change within the control group is an increase of 17.07 points on the 100 point
+scale (where an  increase indicates more alcohol use). 
