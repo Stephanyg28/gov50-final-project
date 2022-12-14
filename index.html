@@ -115,7 +115,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["data/drug-use-by-age.csv","data/README.md","index_files/anchor-4.2.2/anchor.min.js","index_files/bowser-1.9.3/bowser.min.js","index_files/distill-2.2.21/template.v2.js","index_files/header-attrs-2.16/header-attrs.js","index_files/header-attrs-2.17/header-attrs.js","index_files/jquery-3.6.0/jquery-3.6.0.js","index_files/jquery-3.6.0/jquery-3.6.0.min.js","index_files/jquery-3.6.0/jquery-3.6.0.min.map","index_files/popper-2.6.0/popper.min.js","index_files/tippy-6.2.7/tippy-bundle.umd.min.js","index_files/tippy-6.2.7/tippy-light-border.css","index_files/tippy-6.2.7/tippy.css","index_files/tippy-6.2.7/tippy.umd.min.js","index_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["data/ATP W86.sav","data/README.md","data/W86_Mar21 4/ATP W86 methodology.pdf","data/W86_Mar21 4/ATP W86 questionnaire.pdf","data/W86_Mar21 4/ATP W86 readme.txt","data/W86_Mar21 4/ATP W86 topline.pdf","index_files/anchor-4.2.2/anchor.min.js","index_files/bowser-1.9.3/bowser.min.js","index_files/distill-2.2.21/template.v2.js","index_files/header-attrs-2.16/header-attrs.js","index_files/header-attrs-2.17/header-attrs.js","index_files/jquery-3.6.0/jquery-3.6.0.js","index_files/jquery-3.6.0/jquery-3.6.0.min.js","index_files/jquery-3.6.0/jquery-3.6.0.min.map","index_files/popper-2.6.0/popper.min.js","index_files/tippy-6.2.7/tippy-bundle.umd.min.js","index_files/tippy-6.2.7/tippy-light-border.css","index_files/tippy-6.2.7/tippy.css","index_files/tippy-6.2.7/tippy.umd.min.js","index_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -1518,179 +1518,103 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 <div class="d-article">
 <h2 id="project-thoughts">Project thoughts</h2>
-<p>I am interested in exploring data related to drug use and age group.</p>
+<p>I will be exploring Latino’s attitudes towards immigration in the United States.</p>
 <p>In this study, I plan to examine the extent to which people get high and with what drugs. I hypothesize that older people will most frequently use drugs like crack and cocaine while younger people will use drugs like marijuana. I also expect that the more highly addictive drugs will be used with more frequency and among younger people as addictions tend to start off with younger people. If I observe that older people use drugs at a higher frequency, this would provide support for my hypothesis. If, on the other hand, I observe that younger people use drugs at a higher frequency, this would provide evidence against my hypothesis.</p>
 <table>
 <colgroup>
-<col style="width: 25%" />
-<col style="width: 75%" />
+<col style="width: 18%" />
+<col style="width: 81%" />
 </colgroup>
 <thead>
 <tr class="header">
-<th>Header</th>
-<th>Definition</th>
+<th>Name:</th>
+<th>Description:</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><code>alcohol-use</code></td>
-<td>Percentage of those in an age group who used alcohol in the past 12 months</td>
+<td><code>KNOWUNAUTH_W86</code></td>
+<td>Does the person know someone who is undocumented (1), or not (2)?</td>
 </tr>
 <tr class="even">
-<td><code>alcohol-frequency</code></td>
-<td>Median number of times a user in an age group used alcohol in the past 12 months</td>
+<td><code>AFROLATINO_W86</code></td>
+<td>Does the person identity as Afro-Latinx or Afro-Caribbean (1), or not (2)?</td>
 </tr>
 <tr class="odd">
-<td><code>marijuana-use</code></td>
-<td>Percentage of those in an age group who used marijuana in the past 12 months</td>
+<td><code>CHILD_LT12_W86</code></td>
+<td>Is the person a parent or guardian of any children under the age 12 (1), or not (2)?</td>
 </tr>
 <tr class="even">
-<td><code>marijuana-frequency</code></td>
-<td>Median number of times a user in an age group used marijuana in the past 12 months</td>
+<td><code>ST2_W86</code></td>
+<td>Person’s attitude towards immigration ( 1 = Requires no change, 2 = Requires only minor changes, 3 = Requires major changes, 4 = Needs to be completely rebuilt)</td>
 </tr>
 <tr class="odd">
-<td><code>cocaine-use</code></td>
-<td>Percentage of those in an age group who used cocaine in the past 12 months</td>
-</tr>
-<tr class="even">
-<td><code>cocaine-frequency</code></td>
-<td>Median number of times a user in an age group used cocaine in the past 12 months</td>
-</tr>
-<tr class="odd">
-<td><code>crack-use</code></td>
-<td>Percentage of those in an age group who used crack in the past 12 months</td>
-</tr>
-<tr class="even">
-<td><code>crack-frequency</code></td>
-<td>Median number of times a user in an age group used crack in the past 12 months</td>
-</tr>
-<tr class="odd">
-<td><code>heroin-use</code></td>
-<td>Percentage of those in an age group who used heroin in the past 12 months</td>
-</tr>
-<tr class="even">
-<td><code>heroin-frequency</code></td>
-<td>Median number of times a user in an age group used heroin in the past 12 months</td>
-</tr>
-<tr class="odd">
-<td><code>hallucinogen-use</code></td>
-<td>Percentage of those in an age group who used hallucinogens in the past 12 months</td>
-</tr>
-<tr class="even">
-<td><code>hallucinogen-frequency</code></td>
-<td>Median number of times a user in an age group used hallucinogens in the past 12 months</td>
-</tr>
-<tr class="odd">
-<td><code>inhalant-use</code></td>
-<td>Percentage of those in an age group who used inhalants in the past 12 months</td>
-</tr>
-<tr class="even">
-<td><code>inhalant-frequency</code></td>
-<td>Median number of times a user in an age group used inhalants in the past 12 months</td>
-</tr>
-<tr class="odd">
-<td><code>pain-releiver-use</code></td>
-<td>Percentage of those in an age group who used pain relievers in the past 12 months</td>
-</tr>
-<tr class="even">
-<td><code>pain-releiver-frequency</code></td>
-<td>Median number of times a user in an age group used pain relievers in the past 12 months</td>
-</tr>
-<tr class="odd">
-<td><code>oxycontin-use</code></td>
-<td>Percentage of those in an age group who used oxycontin in the past 12 months</td>
-</tr>
-<tr class="even">
-<td><code>oxycontin-frequency</code></td>
-<td>Median number of times a user in an age group used oxycontin in the past 12 months</td>
-</tr>
-<tr class="odd">
-<td><code>tranquilizer-use</code></td>
-<td>Percentage of those in an age group who used tranquilizer in the past 12 months</td>
-</tr>
-<tr class="even">
-<td><code>tranquilizer-frequency</code></td>
-<td>Median number of times a user in an age group used tranquilizer in the past 12 months</td>
-</tr>
-<tr class="odd">
-<td><code>stimulant-use</code></td>
-<td>Percentage of those in an age group who used stimulants in the past 12 months</td>
-</tr>
-<tr class="even">
-<td><code>stimulant-frequency</code></td>
-<td>Median number of times a user in an age group used stimulants in the past 12 months</td>
-</tr>
-<tr class="odd">
-<td><code>meth-use</code></td>
-<td>Percentage of those in an age group who used meth in the past 12 months</td>
-</tr>
-<tr class="even">
-<td><code>meth-frequency</code></td>
-<td>Median number of times a user in an age group used meth in the past 12 months</td>
-</tr>
-<tr class="odd">
-<td><code>sedative-use</code></td>
-<td>Percentage of those in an age group who used sedatives in the past 12 months</td>
-</tr>
-<tr class="even">
-<td><code>sedative-frequency</code></td>
-<td>Median number of times a user in an age group used sedatives in the past 12 months</td>
+<td><code>WORRYDPORT_W86</code> `</td>
+<td>Person’s worry of a family member or close friend being deported ( 1 = A lot, 2 = Some, 3 = Not much, 4 = Not at all)</td>
 </tr>
 </tbody>
 </table>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://tidyverse.tidyverse.org'>tidyverse</a></span><span class='op'>)</span></span>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='st'><a href='https://haven.tidyverse.org'>"haven"</a></span><span class='op'>)</span></span>
+<span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://tidyverse.tidyverse.org'>tidyverse</a></span><span class='op'>)</span></span>
 <span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://dplyr.tidyverse.org'>dplyr</a></span><span class='op'>)</span></span>
 <span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://broom.tidymodels.org/'>broom</a></span><span class='op'>)</span></span>
 <span></span>
-<span><span class='va'>drugs</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://readr.tidyverse.org/reference/read_delim.html'>read_csv</a></span><span class='op'>(</span><span class='st'>"data/drug-use-by-age.csv"</span><span class='op'>)</span></span>
+<span><span class='va'>ATP_W86</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://haven.tidyverse.org/reference/read_spss.html'>read_sav</a></span><span class='op'>(</span><span class='st'>"data/ATP W86.sav"</span><span class='op'>)</span></span>
 <span></span>
-<span><span class='va'>preteen_alcohol</span> <span class='op'>&lt;-</span> <span class='va'>drugs</span> <span class='op'>|&gt;</span></span>
-<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>`age`</span>  <span class='op'>&gt;=</span> <span class='fl'>12</span> <span class='op'>)</span> <span class='op'>|&gt;</span></span>
-<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/summarise.html'>summarize</a></span><span class='op'>(</span>avg_preteen_use <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>`alcohol-use`</span><span class='op'>)</span><span class='op'>)</span></span>
-<span><span class='fu'>knitr</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/knitr/man/kable.html'>kable</a></span><span class='op'>(</span><span class='va'>preteen_alcohol</span><span class='op'>)</span> </span></code></pre>
+<span><span class='va'>attitude</span> <span class='op'>&lt;-</span> <span class='va'>ATP_W86</span></span>
+<span></span>
+<span><span class='va'>latinos</span> <span class='op'>&lt;-</span> <span class='va'>attitude</span><span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/select.html'>select</a></span><span class='op'>(</span><span class='va'>QKEY</span>,<span class='va'>KNOWUNAUTH_W86</span>,<span class='va'>AFROLATINO_W86</span>,<span class='va'>CHILD_LT12_W86</span>,<span class='va'>ST2_W86</span>, <span class='va'>WORRYDPORT_W86</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>latinos</span><span class='op'>$</span><span class='va'>KNOWUNAUTH_W86</span><span class='op'>[</span><span class='va'>latinos</span><span class='op'>$</span><span class='va'>KNOWUNAUTH_W86</span> <span class='op'>==</span> <span class='fl'>99</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='cn'>NA</span></span>
+<span><span class='va'>latinos</span><span class='op'>$</span><span class='va'>AFROLATINO_W86</span><span class='op'>[</span><span class='va'>latinos</span><span class='op'>$</span><span class='va'>AFROLATINO_W86</span> <span class='op'>==</span> <span class='fl'>99</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='cn'>NA</span></span>
+<span><span class='va'>latinos</span><span class='op'>$</span><span class='va'>CHILD_LT12_W86</span><span class='op'>[</span><span class='va'>latinos</span><span class='op'>$</span><span class='va'>CHILD_LT12_W86</span> <span class='op'>==</span> <span class='fl'>99</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='cn'>NA</span></span>
+<span><span class='va'>latinos</span><span class='op'>$</span><span class='va'>ST2_W86</span><span class='op'>[</span><span class='va'>latinos</span><span class='op'>$</span><span class='va'>ST2_W86</span> <span class='op'>==</span> <span class='fl'>99</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='cn'>NA</span></span>
+<span><span class='va'>latinos</span><span class='op'>$</span><span class='va'>WORRYDPORT_W86</span><span class='op'>[</span><span class='va'>latinos</span><span class='op'>$</span><span class='va'>WORRYDPORT_W86</span> <span class='op'>==</span> <span class='fl'>99</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='cn'>NA</span></span>
+<span></span>
+<span><span class='va'>latinos</span> <span class='op'>&lt;-</span> <span class='va'>latinos</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://rdrr.io/r/stats/na.fail.html'>na.omit</a></span><span class='op'>(</span><span class='va'>latinos</span><span class='op'>)</span></span></code></pre>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>latinos</span> <span class='op'>&lt;-</span> <span class='va'>latinos</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span>AfroLatinx <span class='op'>=</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/if_else.html'>if_else</a></span><span class='op'>(</span><span class='va'>AFROLATINO_W86</span> <span class='op'>==</span> <span class='fl'>1</span>, <span class='st'>"AfroLatinx"</span>, <span class='st'>"Not AfroLatinx"</span><span class='op'>)</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>AfroLatinx_table</span> <span class='op'>&lt;-</span> <span class='va'>latinos</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/group_by.html'>group_by</a></span><span class='op'>(</span><span class='va'>AfroLatinx</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/summarise.html'>summarize</a></span><span class='op'>(</span>n <span class='op'>=</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/context.html'>n</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span>prop <span class='op'>=</span> <span class='va'>n</span> <span class='op'>/</span><span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span><span class='op'>(</span><span class='va'>n</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/select.html'>select</a></span><span class='op'>(</span><span class='op'>-</span><span class='va'>n</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://tidyr.tidyverse.org/reference/pivot_wider.html'>pivot_wider</a></span><span class='op'>(</span>names_from <span class='op'>=</span> <span class='va'>AfroLatinx</span>, values_from <span class='op'>=</span> <span class='va'>prop</span></span>
+<span>  <span class='op'>)</span></span>
+<span><span class='fu'>knitr</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/knitr/man/kable.html'>kable</a></span><span class='op'>(</span><span class='va'>AfroLatinx_table</span>, digits <span class='op'>=</span> <span class='fl'>2</span><span class='op'>)</span></span></code></pre>
 </div>
 <table>
 <thead>
 <tr class="header">
-<th style="text-align: right;">avg_preteen_use</th>
+<th style="text-align: right;">AfroLatinx</th>
+<th style="text-align: right;">Not AfroLatinx</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: right;">55.42941</td>
+<td style="text-align: right;">0.1</td>
+<td style="text-align: right;">0.9</td>
 </tr>
 </tbody>
 </table>
+</div>
+<div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>teen_alcohol</span> <span class='op'>&lt;-</span> <span class='va'>drugs</span> <span class='op'>|&gt;</span></span>
-<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>`age`</span> <span class='op'>&gt;=</span> <span class='fl'>13</span> <span class='op'>&amp;</span> <span class='va'>age</span> <span class='op'>&lt;=</span> <span class='fl'>19</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
-<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/summarise.html'>summarize</a></span><span class='op'>(</span>avg_teen_use <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>`alcohol-use`</span><span class='op'>)</span><span class='op'>)</span></span>
-<span><span class='fu'>knitr</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/knitr/man/kable.html'>kable</a></span><span class='op'>(</span><span class='va'>teen_alcohol</span><span class='op'>)</span> </span></code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span>  <span class='co'>##mutate(Know_Undocumented = if_else(KNOWUNAUTH_W86 == 1, "Knows Undocumented Immigrant", "Does not Know Undocumented Immigrant"),</span></span>
+<span>        <span class='co'>## AfroLatinx = if_else(AFROLATINO_W86 == 1, "AfroLatinx", "Not AfroLatinx"),</span></span>
+<span>        <span class='co'>## Parent = if_else(CHILD_LT12_W86 == 1, "Parent of Child Under 12", "Not a Parent of Child Under 12"))</span></span></code></pre>
 </div>
-<table>
-<thead>
-<tr class="header">
-<th style="text-align: right;">avg_teen_use</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: right;">38.35714</td>
-</tr>
-</tbody>
-</table>
-<div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>ate_teen_alc</span> <span class='op'>&lt;-</span> <span class='op'>(</span><span class='va'>ATE</span> <span class='op'>=</span> <span class='va'>preteen_alcohol</span> <span class='op'>-</span> <span class='va'>teen_alcohol</span><span class='op'>)</span></span>
-<span><span class='va'>ate_teen_alc</span> </span></code></pre>
 </div>
-<pre><code>  avg_preteen_use
-1        17.07227</code></pre>
-</div>
-<p>The average change within the control group is an increase of 17.07 points on the 100 point
-scale (where an increase indicates more alcohol use).</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>

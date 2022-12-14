@@ -8,64 +8,72 @@ output:
 ---
 
 
-
 ## Project thoughts
 
-I am interested in exploring data related to drug use and age group.
+I will be exploring Latino's attitudes towards immigration in the United States.
 
-In this study, I plan to examine the extent to which people get high and with what drugs. I hypothesize that older people will most frequently use drugs like crack and cocaine while younger people will use drugs like marijuana. I also expect that the more highly addictive drugs will be used with more frequency and among younger people as addictions tend to start off with younger people.  If I observe that older people use drugs at a higher frequency, this would provide support for my hypothesis. If, on the other hand, I observe that younger people use drugs at a higher frequency, this would provide evidence against my hypothesis.
+In this study, I plan to examine the extent to which people get high and with what drugs. I hypothesize that older people will most frequently use drugs like crack and cocaine while younger people will use drugs like marijuana. I also expect that the more highly addictive drugs will be used with more frequency and among younger people as addictions tend to start off with younger people. If I observe that older people use drugs at a higher frequency, this would provide support for my hypothesis. If, on the other hand, I observe that younger people use drugs at a higher frequency, this would provide evidence against my hypothesis.
 
 
-Header | Definition
----|---------
-`alcohol-use` | Percentage of those in an age group who used alcohol in the past 12 months
-`alcohol-frequency` | Median number of times a user in an age group used alcohol in the past 12 months
-`marijuana-use` | Percentage of those in an age group who used marijuana in the past 12 months
-`marijuana-frequency` | Median number of times a user in an age group used marijuana in the past 12 months
-`cocaine-use` | Percentage of those in an age group who used cocaine in the past 12 months
-`cocaine-frequency` | Median number of times a user in an age group used cocaine in the past 12 months
-`crack-use` | Percentage of those in an age group who used crack in the past 12 months
-`crack-frequency` | Median number of times a user in an age group used crack in the past 12 months
-`heroin-use` | Percentage of those in an age group who used heroin in the past 12 months
-`heroin-frequency` | Median number of times a user in an age group used heroin in the past 12 months
-`hallucinogen-use` | Percentage of those in an age group who used hallucinogens in the past 12 months
-`hallucinogen-frequency` | Median number of times a user in an age group used hallucinogens in the past 12 months
-`inhalant-use` | Percentage of those in an age group who used inhalants in the past 12 months
-`inhalant-frequency` | Median number of times a user in an age group used inhalants in the past 12 months
-`pain-releiver-use` | Percentage of those in an age group who used pain relievers in the past 12 months
-`pain-releiver-frequency` | Median number of times a user in an age group used pain relievers in the past 12 months
-`oxycontin-use` | Percentage of those in an age group who used oxycontin in the past 12 months
-`oxycontin-frequency` | Median number of times a user in an age group used oxycontin in the past 12 months
-`tranquilizer-use` | Percentage of those in an age group who used tranquilizer in the past 12 months
-`tranquilizer-frequency` | Median number of times a user in an age group used tranquilizer in the past 12 months
-`stimulant-use` | Percentage of those in an age group who used stimulants in the past 12 months
-`stimulant-frequency` | Median number of times a user in an age group used stimulants in the past 12 months
-`meth-use` | Percentage of those in an age group who used meth in the past 12 months
-`meth-frequency` | Median number of times a user in an age group used meth in the past 12 months
-`sedative-use` | Percentage of those in an age group who used sedatives in the past 12 months
-`sedative-frequency` | Median number of times a user in an age group used sedatives in the past 12 months
+| Name:              | Description:                                                                         |
+|--------------------|--------------------------------------------------------------------------------------|
+| `KNOWUNAUTH_W86`   | Does the person know someone who is undocumented (1), or not (2)?                    |
+| `AFROLATINO_W86`   | Does the person identity as Afro-Latinx or Afro-Caribbean (1), or not (2)?           |
+| `CHILD_LT12_W86`   | Is the person a parent or guardian of any children under the age 12 (1), or not (2)? |
+| `ST2_W86`          | Person's attitude towards immigration ( 1 = Requires no change, 2 = Requires only minor changes, 3 = Requires major                        changes, 4 = Needs to be completely rebuilt)                                         |
+| `WORRYDPORT_W86` ` | Person's worry of a family member or close friend being deported ( 1 = A lot, 2 = Some, 3 = Not much, 4 = Not at all)                                                                                                        |
+
+
+
 
 
 ```{r}
+library("haven")
 library(tidyverse)
 library(dplyr)
 library(broom)
 
-drugs <- read_csv("data/drug-use-by-age.csv")
+ATP_W86 <- read_sav("data/ATP W86.sav")
 
-preteen_alcohol <- drugs |>
-  filter(`age`  >= 12 ) |>
-  summarize(avg_preteen_use = mean(`alcohol-use`))
-knitr::kable(preteen_alcohol) 
+attitude <- ATP_W86
 
-teen_alcohol <- drugs |>
-  filter(`age` >= 13 & age <= 19) |>
-  summarize(avg_teen_use = mean(`alcohol-use`))
-knitr::kable(teen_alcohol) 
+latinos <- attitude|>
+  select(QKEY,KNOWUNAUTH_W86,AFROLATINO_W86,CHILD_LT12_W86,ST2_W86, WORRYDPORT_W86)
 
-ate_teen_alc <- (ATE = preteen_alcohol - teen_alcohol)
-ate_teen_alc 
+latinos$KNOWUNAUTH_W86[latinos$KNOWUNAUTH_W86 == 99] <- NA
+latinos$AFROLATINO_W86[latinos$AFROLATINO_W86 == 99] <- NA
+latinos$CHILD_LT12_W86[latinos$CHILD_LT12_W86 == 99] <- NA
+latinos$ST2_W86[latinos$ST2_W86 == 99] <- NA
+latinos$WORRYDPORT_W86[latinos$WORRYDPORT_W86 == 99] <- NA
+
+latinos <- latinos |>
+  na.omit(latinos)
+
+
 ```
 
-The average change within the control group is an increase of 17.07 points on the 100 point
-scale (where an  increase indicates more alcohol use). 
+
+```{r}
+latinos <- latinos |>
+  mutate(AfroLatinx = if_else(AFROLATINO_W86 == 1, "AfroLatinx", "Not AfroLatinx"))
+
+AfroLatinx_table <- latinos |>
+  group_by(AfroLatinx) |>
+  summarize(n = n()) |>
+  mutate(prop = n /sum(n)) |>
+  select(-n) |>
+  pivot_wider(names_from = AfroLatinx, values_from = prop
+  )
+knitr::kable(AfroLatinx_table, digits = 2)
+
+    
+
+```
+
+```{r}
+  ##mutate(Know_Undocumented = if_else(KNOWUNAUTH_W86 == 1, "Knows Undocumented Immigrant", "Does not Know Undocumented Immigrant"),
+        ## AfroLatinx = if_else(AFROLATINO_W86 == 1, "AfroLatinx", "Not AfroLatinx"),
+        ## Parent = if_else(CHILD_LT12_W86 == 1, "Parent of Child Under 12", "Not a Parent of Child Under 12"))
+
+```
+
