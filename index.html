@@ -115,7 +115,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["data/ATP W86.sav","data/README.md","data/W86_Mar21 4/ATP W86 methodology.pdf","data/W86_Mar21 4/ATP W86 questionnaire.pdf","data/W86_Mar21 4/ATP W86 readme.txt","data/W86_Mar21 4/ATP W86 topline.pdf","index_files/anchor-4.2.2/anchor.min.js","index_files/bowser-1.9.3/bowser.min.js","index_files/distill-2.2.21/template.v2.js","index_files/header-attrs-2.16/header-attrs.js","index_files/header-attrs-2.17/header-attrs.js","index_files/jquery-3.6.0/jquery-3.6.0.js","index_files/jquery-3.6.0/jquery-3.6.0.min.js","index_files/jquery-3.6.0/jquery-3.6.0.min.map","index_files/popper-2.6.0/popper.min.js","index_files/tippy-6.2.7/tippy-bundle.umd.min.js","index_files/tippy-6.2.7/tippy-light-border.css","index_files/tippy-6.2.7/tippy.css","index_files/tippy-6.2.7/tippy.umd.min.js","index_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["data/ATP W86.sav","data/README.md","data/W86_Mar21 4/ATP W86 methodology.pdf","data/W86_Mar21 4/ATP W86 questionnaire.pdf","data/W86_Mar21 4/ATP W86 readme.txt","data/W86_Mar21 4/ATP W86 topline.pdf","index_files/anchor-4.2.2/anchor.min.js","index_files/bowser-1.9.3/bowser.min.js","index_files/distill-2.2.21/template.v2.js","index_files/figure-html5/unnamed-chunk-2-1.png","index_files/figure-html5/unnamed-chunk-3-1.png","index_files/figure-html5/unnamed-chunk-4-1.png","index_files/figure-html5/unnamed-chunk-6-1.png","index_files/figure-html5/unnamed-chunk-6-2.png","index_files/figure-html5/unnamed-chunk-7-1.png","index_files/figure-html5/unnamed-chunk-7-2.png","index_files/header-attrs-2.16/header-attrs.js","index_files/header-attrs-2.17/header-attrs.js","index_files/jquery-3.6.0/jquery-3.6.0.js","index_files/jquery-3.6.0/jquery-3.6.0.min.js","index_files/jquery-3.6.0/jquery-3.6.0.min.map","index_files/popper-2.6.0/popper.min.js","index_files/tippy-6.2.7/tippy-bundle.umd.min.js","index_files/tippy-6.2.7/tippy-light-border.css","index_files/tippy-6.2.7/tippy.css","index_files/tippy-6.2.7/tippy.umd.min.js","index_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -1517,9 +1517,13 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </div>
 
 <div class="d-article">
-<h2 id="project-thoughts">Project thoughts</h2>
-<p>I will be exploring Latino’s attitudes towards immigration in the United States.</p>
-<p>In this study, I plan to examine the extent to which people get high and with what drugs. I hypothesize that older people will most frequently use drugs like crack and cocaine while younger people will use drugs like marijuana. I also expect that the more highly addictive drugs will be used with more frequency and among younger people as addictions tend to start off with younger people. If I observe that older people use drugs at a higher frequency, this would provide support for my hypothesis. If, on the other hand, I observe that younger people use drugs at a higher frequency, this would provide evidence against my hypothesis.</p>
+<h2 id="introduction-section">Introduction Section</h2>
+<p>In this study, I plan to examine the attitudes of Latinos towards immigration in the United States. My research question is do the factors of knowing someone is undocumented, being AfroLatino, and and worrying of a family member or close friend being deported result in a lower ranking in the question of establishing a way for most immigrants currently in the country illegally to stay in the United States legally? In this data set, a respondents attitude towards establishing a way for most immigrants currently in the country illegally to stay in the United States legally were ranked as 1 = Very important goal, 2 = Somewhat important goal, 3 = Not too important goal, or 4 = Not at all important goal, meaning a lower ranking is of higher importance and vice-versa. I hypothesize that the factors of knowing someone is undocumented or worrying of a family member or close friend being deported will result in a lower ranking of the goals importance. I also hypothesize being AfroLatino will also have a higher ranking than not being AfroLatino because predominantly black Latin America countries are not experiencing increases in immigration unlike countries from Central America.</p>
+<h2 id="data-description">Data Description</h2>
+<p>The data I will be using is from the Pew Research Center’s American Trends Panel Wave 86, the National Survey of Latinos. The data was collected via self-administered web surveys. The surveys were conducted in both English and Spanish. The questionnaire was sent out through March 15th through March 28th 2021. and the research design is cross-sectional. The specific report I am using is based on those who self-identified as Hispanics in this web survey. Most of the questions were yes/ no or on a scale of 1-4. When a question was left unanswered or was skipped, a 99 was placed to identify this. There was no specific outcome of interest in this web survey as the pain purpose was just to document trends of American society.</p>
+<p>The data set can be found here:
+“American Trends Panel Wave 86.” Pew Research Center, Washington, D.C. (March 15 – March 28, 2021) <a href="https://www.pewresearch.org/hispanic/dataset/american-trends-panel-wave-86/" class="uri">https://www.pewresearch.org/hispanic/dataset/american-trends-panel-wave-86/</a>.</p>
+<p>I will be using the following variables to test my hypothesis:</p>
 <table>
 <colgroup>
 <col style="width: 18%" />
@@ -1533,20 +1537,20 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </thead>
 <tbody>
 <tr class="odd">
+<td><code>QKEY</code></td>
+<td>Unique ID number of person taking the web survey</td>
+</tr>
+<tr class="even">
 <td><code>KNOWUNAUTH_W86</code></td>
 <td>Does the person know someone who is undocumented (1), or not (2)?</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><code>AFROLATINO_W86</code></td>
 <td>Does the person identity as Afro-Latinx or Afro-Caribbean (1), or not (2)?</td>
 </tr>
-<tr class="odd">
-<td><code>CHILD_LT12_W86</code></td>
-<td>Is the person a parent or guardian of any children under the age 12 (1), or not (2)?</td>
-</tr>
 <tr class="even">
-<td><code>ST2_W86</code></td>
-<td>Person’s attitude towards immigration ( 1 = Requires no change, 2 = Requires only minor changes, 3 = Requires major changes, 4 = Needs to be completely rebuilt)</td>
+<td><code>IMMVAL_c_W86</code></td>
+<td>Person’s attitude towards establishing a way for most immigrants currently in the country illegally to stay in the United States legally ( 1 = Very important goal, 2 = Somewhat important goal, 3 = Not too important goal, 4 = Not at all important goal)</td>
 </tr>
 <tr class="odd">
 <td><code>WORRYDPORT_W86</code> `</td>
@@ -1561,60 +1565,414 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://dplyr.tidyverse.org'>dplyr</a></span><span class='op'>)</span></span>
 <span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://broom.tidymodels.org/'>broom</a></span><span class='op'>)</span></span>
 <span></span>
-<span><span class='va'>ATP_W86</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://haven.tidyverse.org/reference/read_spss.html'>read_sav</a></span><span class='op'>(</span><span class='st'>"data/ATP W86.sav"</span><span class='op'>)</span></span>
+<span><span class='va'>latinos</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://haven.tidyverse.org/reference/read_spss.html'>read_sav</a></span><span class='op'>(</span><span class='st'>"data/ATP W86.sav"</span><span class='op'>)</span></span>
 <span></span>
-<span><span class='va'>attitude</span> <span class='op'>&lt;-</span> <span class='va'>ATP_W86</span></span>
-<span></span>
-<span><span class='va'>latinos</span> <span class='op'>&lt;-</span> <span class='va'>attitude</span><span class='op'>|&gt;</span></span>
-<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/select.html'>select</a></span><span class='op'>(</span><span class='va'>QKEY</span>,<span class='va'>KNOWUNAUTH_W86</span>,<span class='va'>AFROLATINO_W86</span>,<span class='va'>CHILD_LT12_W86</span>,<span class='va'>ST2_W86</span>, <span class='va'>WORRYDPORT_W86</span><span class='op'>)</span></span>
+<span><span class='va'>latinos</span> <span class='op'>&lt;-</span> <span class='va'>latinos</span><span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/select.html'>select</a></span><span class='op'>(</span><span class='va'>QKEY</span>,<span class='va'>KNOWUNAUTH_W86</span>,<span class='va'>AFROLATINO_W86</span>, <span class='va'>WORRYDPORT_W86</span>, <span class='va'>IMMVAL_c_W86</span><span class='op'>)</span></span>
 <span></span>
 <span><span class='va'>latinos</span><span class='op'>$</span><span class='va'>KNOWUNAUTH_W86</span><span class='op'>[</span><span class='va'>latinos</span><span class='op'>$</span><span class='va'>KNOWUNAUTH_W86</span> <span class='op'>==</span> <span class='fl'>99</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='cn'>NA</span></span>
 <span><span class='va'>latinos</span><span class='op'>$</span><span class='va'>AFROLATINO_W86</span><span class='op'>[</span><span class='va'>latinos</span><span class='op'>$</span><span class='va'>AFROLATINO_W86</span> <span class='op'>==</span> <span class='fl'>99</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='cn'>NA</span></span>
-<span><span class='va'>latinos</span><span class='op'>$</span><span class='va'>CHILD_LT12_W86</span><span class='op'>[</span><span class='va'>latinos</span><span class='op'>$</span><span class='va'>CHILD_LT12_W86</span> <span class='op'>==</span> <span class='fl'>99</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='cn'>NA</span></span>
-<span><span class='va'>latinos</span><span class='op'>$</span><span class='va'>ST2_W86</span><span class='op'>[</span><span class='va'>latinos</span><span class='op'>$</span><span class='va'>ST2_W86</span> <span class='op'>==</span> <span class='fl'>99</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='cn'>NA</span></span>
+<span><span class='va'>latinos</span><span class='op'>$</span><span class='va'>IMMVAL_c_W86</span><span class='op'>[</span><span class='va'>latinos</span><span class='op'>$</span><span class='va'>IMMVAL_c_W86</span> <span class='op'>==</span> <span class='fl'>99</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='cn'>NA</span></span>
 <span><span class='va'>latinos</span><span class='op'>$</span><span class='va'>WORRYDPORT_W86</span><span class='op'>[</span><span class='va'>latinos</span><span class='op'>$</span><span class='va'>WORRYDPORT_W86</span> <span class='op'>==</span> <span class='fl'>99</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='cn'>NA</span></span>
 <span></span>
 <span><span class='va'>latinos</span> <span class='op'>&lt;-</span> <span class='va'>latinos</span> <span class='op'>|&gt;</span></span>
 <span>  <span class='fu'><a href='https://rdrr.io/r/stats/na.fail.html'>na.omit</a></span><span class='op'>(</span><span class='va'>latinos</span><span class='op'>)</span></span></code></pre>
 </div>
 </div>
+<h2 id="plot-that-summarizes-the-dependent-variable">Plot that Summarizes the Dependent Variable:</h2>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>latinos</span> <span class='op'>&lt;-</span> <span class='va'>latinos</span> <span class='op'>|&gt;</span></span>
-<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span>AfroLatinx <span class='op'>=</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/if_else.html'>if_else</a></span><span class='op'>(</span><span class='va'>AFROLATINO_W86</span> <span class='op'>==</span> <span class='fl'>1</span>, <span class='st'>"AfroLatinx"</span>, <span class='st'>"Not AfroLatinx"</span><span class='op'>)</span><span class='op'>)</span></span>
+<pre class="sourceCode r"><code class="sourceCode r"><span> <span class='va'>latinos</span> <span class='op'>&lt;-</span> <span class='va'>latinos</span> <span class='op'>|&gt;</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span></span>
+<span>    attitudes <span class='op'>=</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/case_when.html'>case_when</a></span><span class='op'>(</span></span>
+<span>      <span class='va'>IMMVAL_c_W86</span> <span class='op'>==</span> <span class='fl'>1</span> <span class='op'>~</span> <span class='st'>"Very important goal"</span>,</span>
+<span>      <span class='va'>IMMVAL_c_W86</span> <span class='op'>==</span> <span class='fl'>2</span> <span class='op'>~</span> <span class='st'>"Somewhat important goal"</span>,</span>
+<span>      <span class='va'>IMMVAL_c_W86</span> <span class='op'>==</span> <span class='fl'>3</span> <span class='op'>~</span> <span class='st'>"Not too important goal"</span>,</span>
+<span>      <span class='va'>IMMVAL_c_W86</span> <span class='op'>==</span> <span class='fl'>4</span> <span class='op'>~</span><span class='st'>"Not at all important goal"</span></span>
+<span>    <span class='op'>)</span></span>
+<span>    <span class='op'>)</span> </span>
 <span></span>
-<span><span class='va'>AfroLatinx_table</span> <span class='op'>&lt;-</span> <span class='va'>latinos</span> <span class='op'>|&gt;</span></span>
-<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/group_by.html'>group_by</a></span><span class='op'>(</span><span class='va'>AfroLatinx</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
-<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/summarise.html'>summarize</a></span><span class='op'>(</span>n <span class='op'>=</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/context.html'>n</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
-<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span>prop <span class='op'>=</span> <span class='va'>n</span> <span class='op'>/</span><span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span><span class='op'>(</span><span class='va'>n</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
-<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/select.html'>select</a></span><span class='op'>(</span><span class='op'>-</span><span class='va'>n</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
-<span>  <span class='fu'><a href='https://tidyr.tidyverse.org/reference/pivot_wider.html'>pivot_wider</a></span><span class='op'>(</span>names_from <span class='op'>=</span> <span class='va'>AfroLatinx</span>, values_from <span class='op'>=</span> <span class='va'>prop</span></span>
+<span><span class='va'>latinos_plot</span> <span class='op'>&lt;-</span> <span class='va'>latinos</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>attitudes</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_bar.html'>geom_bar</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span></span>
+<span>    x <span class='op'>=</span> <span class='st'>"Level of Importance"</span>,</span>
+<span>    y <span class='op'>=</span> <span class='st'>"Number of People who responded"</span>,</span>
+<span>    title <span class='op'>=</span> <span class='st'>"Latino's Attitudes Towards Establishing Pathway To Legal Immigration "</span></span>
 <span>  <span class='op'>)</span></span>
-<span><span class='fu'>knitr</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/knitr/man/kable.html'>kable</a></span><span class='op'>(</span><span class='va'>AfroLatinx_table</span>, digits <span class='op'>=</span> <span class='fl'>2</span><span class='op'>)</span></span></code></pre>
+<span><span class='va'>latinos_plot</span></span></code></pre>
+</div>
+<img src="index_files/figure-html5/unnamed-chunk-2-1.png" width="624" />
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>attitudes_table</span> <span class='op'>&lt;-</span> <span class='va'>latinos</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/group_by.html'>group_by</a></span><span class='op'>(</span><span class='va'>attitudes</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/summarise.html'>summarize</a></span><span class='op'>(</span>Count <span class='op'>=</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/context.html'>n</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span></span>
+<span><span class='fu'>knitr</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/knitr/man/kable.html'>kable</a></span><span class='op'>(</span><span class='va'>attitudes_table</span><span class='op'>)</span></span></code></pre>
 </div>
 <table>
 <thead>
 <tr class="header">
-<th style="text-align: right;">AfroLatinx</th>
-<th style="text-align: right;">Not AfroLatinx</th>
+<th style="text-align: left;">attitudes</th>
+<th style="text-align: right;">Count</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: right;">0.1</td>
-<td style="text-align: right;">0.9</td>
+<td style="text-align: left;">Not at all important goal</td>
+<td style="text-align: right;">197</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Not too important goal</td>
+<td style="text-align: right;">350</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Somewhat important goal</td>
+<td style="text-align: right;">1029</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Very important goal</td>
+<td style="text-align: right;">1676</td>
 </tr>
 </tbody>
 </table>
 </div>
+<p>1672 Latinos said they felt that establishing a way for most immigrants currently in the country illegally to stay in the United States legally was very important goal, 1,027 said it was a somewhat important goal and 350 said it was a not too important goal and 196 said it was not at all an important goal. Because there was 3,245 out of the 3375 Latinos surveyed answered this question that means that 51%, the majority of Latinos believe that establishing a way for most immigrants currently in the country illegally to stay in the United States legally was a very important goal.</p>
+<h2 id="results-section">Results Section:</h2>
+<h2 id="afrolatino-idenity-impact-on-immigration-attitudes">AfroLatino Idenity Impact on Immigration Attitudes</h2>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span>  <span class='co'>##mutate(Know_Undocumented = if_else(KNOWUNAUTH_W86 == 1, "Knows Undocumented Immigrant", "Does not Know Undocumented Immigrant"),</span></span>
-<span>        <span class='co'>## AfroLatinx = if_else(AFROLATINO_W86 == 1, "AfroLatinx", "Not AfroLatinx"),</span></span>
-<span>        <span class='co'>## Parent = if_else(CHILD_LT12_W86 == 1, "Parent of Child Under 12", "Not a Parent of Child Under 12"))</span></span></code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>latinos</span> <span class='op'>&lt;-</span> <span class='va'>latinos</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span>`AfroLatino` <span class='op'>=</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/if_else.html'>if_else</a></span><span class='op'>(</span><span class='va'>AFROLATINO_W86</span> <span class='op'>==</span> <span class='fl'>1</span>, <span class='st'>"AfroLatino"</span>, <span class='st'>"Not AfroLatin"</span><span class='op'>)</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>AfroLatino_table</span> <span class='op'>&lt;-</span> <span class='va'>latinos</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/group_by.html'>group_by</a></span><span class='op'>(</span><span class='va'>AfroLatino</span>, <span class='va'>IMMVAL_c_W86</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/summarise.html'>summarize</a></span><span class='op'>(</span>n <span class='op'>=</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/context.html'>n</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span>prop <span class='op'>=</span> <span class='va'>n</span> <span class='op'>/</span><span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span><span class='op'>(</span><span class='va'>n</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/select.html'>select</a></span><span class='op'>(</span><span class='op'>-</span><span class='va'>n</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://tidyr.tidyverse.org/reference/pivot_wider.html'>pivot_wider</a></span><span class='op'>(</span>names_from <span class='op'>=</span> <span class='va'>AfroLatino</span>, values_from <span class='op'>=</span> <span class='va'>prop</span></span>
+<span>  <span class='op'>)</span></span>
+<span><span class='fu'>knitr</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/knitr/man/kable.html'>kable</a></span><span class='op'>(</span><span class='va'>AfroLatino_table</span>, digits <span class='op'>=</span> <span class='fl'>2</span><span class='op'>)</span></span></code></pre>
 </div>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: right;">IMMVAL_c_W86</th>
+<th style="text-align: right;">AfroLatino</th>
+<th style="text-align: right;">Not AfroLatin</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0.51</td>
+<td style="text-align: right;">0.52</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0.34</td>
+<td style="text-align: right;">0.31</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">0.09</td>
+<td style="text-align: right;">0.11</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">0.05</td>
+<td style="text-align: right;">0.06</td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>afrolatino_means</span> <span class='op'>&lt;-</span> <span class='va'>latinos</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/group_by.html'>group_by</a></span><span class='op'>(</span><span class='va'>AfroLatino</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/summarise.html'>summarize</a></span><span class='op'>(</span>IMMVAL_c_W86_afro <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>IMMVAL_c_W86</span><span class='op'>)</span><span class='op'>)</span></span>
+<span><span class='va'>afrolatino_means</span></span></code></pre>
 </div>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<pre><code># A tibble: 2 × 2
+  AfroLatino    IMMVAL_c_W86_afro
+  &lt;chr&gt;                     &lt;dbl&gt;
+1 AfroLatino                 1.69
+2 Not AfroLatin              1.72</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='st'><a href='https://github.com/hadley/reshape'>"reshape2"</a></span><span class='op'>)</span></span>
+<span><span class='va'>data_means</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/reshape2/man/melt.html'>melt</a></span><span class='op'>(</span><span class='va'>afrolatino_means</span><span class='op'>)</span>                                     </span>
+<span><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='va'>data_means</span><span class='op'>)</span>  </span></code></pre>
+</div>
+<pre><code>     AfroLatino          variable    value
+1    AfroLatino IMMVAL_c_W86_afro 1.691318
+2 Not AfroLatin IMMVAL_c_W86_afro 1.715743</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>plot_latinos</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span>data <span class='op'>=</span> <span class='va'>data_means</span>, mapping <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>AfroLatino</span>, y <span class='op'>=</span> <span class='va'>value</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_bar.html'>geom_col</a></span><span class='op'>(</span>mapping <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>fill <span class='op'>=</span> <span class='va'>AfroLatino</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='st'>"AfroLatino Idenity"</span>,</span>
+<span>y <span class='op'>=</span> <span class='st'>"Average Survey Response to Immigration Question"</span>,</span>
+<span>title <span class='op'>=</span> <span class='st'>"Average Afro-Latino Survey Responses to Immigration Question"</span><span class='op'>)</span></span>
+<span><span class='va'>plot_latinos</span></span></code></pre>
+</div>
+<p><img src="index_files/figure-html5/unnamed-chunk-3-1.png" width="624" /></p>
+</div>
+<p>There is little to no impact between Latinos and AfroLatino in terms of attitudes towards immigration. They are almost identical, with the biggest difference being in the “Somewhat important goal” category with AfroLatino selecting it at 34% vs Latinos selecting it with 31%.</p>
+<h2 id="knowing-someone-undocumented-impacts-on-immigration-attitudes">Knowing Someone Undocumented Impact’s on Immigration Attitudes</h2>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>latinos</span> <span class='op'>&lt;-</span> <span class='va'>latinos</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span>`Know_Undocumented` <span class='op'>=</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/if_else.html'>if_else</a></span><span class='op'>(</span><span class='va'>KNOWUNAUTH_W86</span> <span class='op'>==</span> <span class='fl'>1</span>, <span class='st'>"Knows Undocumented Immigrant"</span>, <span class='st'>"Does not Know Undocumented Immigrant"</span><span class='op'>)</span><span class='op'>)</span></span>
+<span>       </span>
+<span><span class='va'>Know_table</span> <span class='op'>&lt;-</span> <span class='va'>latinos</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/group_by.html'>group_by</a></span><span class='op'>(</span><span class='va'>KNOWUNAUTH_W86</span>, <span class='va'>IMMVAL_c_W86</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/summarise.html'>summarize</a></span><span class='op'>(</span>n <span class='op'>=</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/context.html'>n</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span>prop <span class='op'>=</span> <span class='va'>n</span> <span class='op'>/</span><span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span><span class='op'>(</span><span class='va'>n</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/select.html'>select</a></span><span class='op'>(</span><span class='op'>-</span><span class='va'>n</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://tidyr.tidyverse.org/reference/pivot_wider.html'>pivot_wider</a></span><span class='op'>(</span>names_from <span class='op'>=</span> <span class='va'>KNOWUNAUTH_W86</span>, values_from <span class='op'>=</span> <span class='va'>prop</span></span>
+<span>  <span class='op'>)</span></span>
+<span><span class='fu'>knitr</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/knitr/man/kable.html'>kable</a></span><span class='op'>(</span><span class='va'>Know_table</span>, digits <span class='op'>=</span> <span class='fl'>2</span><span class='op'>)</span></span></code></pre>
+</div>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: right;">IMMVAL_c_W86</th>
+<th style="text-align: right;">1</th>
+<th style="text-align: right;">2</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0.57</td>
+<td style="text-align: right;">0.45</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0.29</td>
+<td style="text-align: right;">0.35</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">0.09</td>
+<td style="text-align: right;">0.13</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">0.05</td>
+<td style="text-align: right;">0.08</td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>know_means</span> <span class='op'>&lt;-</span> <span class='va'>latinos</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/group_by.html'>group_by</a></span><span class='op'>(</span><span class='va'>Know_Undocumented</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/summarise.html'>summarize</a></span><span class='op'>(</span>IMMVAL_c_W86_know <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>IMMVAL_c_W86</span><span class='op'>)</span><span class='op'>)</span></span>
+<span><span class='va'>know_means</span></span></code></pre>
+</div>
+<pre><code># A tibble: 2 × 2
+  Know_Undocumented                    IMMVAL_c_W86_know
+  &lt;chr&gt;                                            &lt;dbl&gt;
+1 Does not Know Undocumented Immigrant              1.83
+2 Knows Undocumented Immigrant                      1.62</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>know_m_means</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/reshape2/man/melt.html'>melt</a></span><span class='op'>(</span><span class='va'>know_means</span><span class='op'>)</span>                                     </span>
+<span><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='va'>know_m_means</span><span class='op'>)</span>  </span></code></pre>
+</div>
+<pre><code>                     Know_Undocumented          variable    value
+1 Does not Know Undocumented Immigrant IMMVAL_c_W86_know 1.834022
+2         Knows Undocumented Immigrant IMMVAL_c_W86_know 1.616111</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>plot_know</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span>data <span class='op'>=</span> <span class='va'>know_m_means</span>, mapping <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>Know_Undocumented</span>, y <span class='op'>=</span> <span class='va'>value</span>, fill <span class='op'>=</span> <span class='va'>Know_Undocumented</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_bar.html'>geom_col</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='st'>"Does Respondent Know an Undocumented Immigrant"</span>,</span>
+<span>y <span class='op'>=</span> <span class='st'>"Average Survey Response to Immigration Question"</span><span class='op'>)</span> <span class='op'>+</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/theme.html'>theme</a></span><span class='op'>(</span>axis.text.x <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>element_text</a></span><span class='op'>(</span>size <span class='op'>=</span> <span class='fl'>6</span><span class='op'>)</span><span class='op'>)</span></span>
+<span><span class='va'>plot_know</span></span></code></pre>
+</div>
+<p><img src="index_files/figure-html5/unnamed-chunk-4-1.png" width="624" /></p>
+</div>
+<p>As can be seen the majority of those who know an undocumented immigrant believe that establishing a way for most immigrants currently in the country illegally to stay in the United States legally is a very important goal or a somewhat important goal. With 57% of Latinos who know an Undocumented Immigrant believing that it is a very important goal. In contrast to only 45% of those who do not know an Undocumented Immigrant believing that it is a very important goal. Similar results can be seen in terms of attitude, with those who know an an undocumented immigrant thinking it is more of an important goal. Knowing an undocumented immigrant resulted in about .22 difference in means, meaning that those who knew someone that was undocumented on average gave a .22 lower score on the scale. In this case the lower the number on the scale, the higher ranked the goal is.</p>
+<h2 id="linear-regression">Linear Regression</h2>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>lm_know</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>IMMVAL_c_W86</span> <span class='op'>~</span> <span class='va'>Know_Undocumented</span>, data <span class='op'>=</span> <span class='va'>latinos</span><span class='op'>)</span></span>
+<span><span class='va'>lm_know</span></span></code></pre>
+</div>
+<pre><code>
+Call:
+lm(formula = IMMVAL_c_W86 ~ Know_Undocumented, data = latinos)
+
+Coefficients:
+                                  (Intercept)  
+                                       1.8340  
+Know_UndocumentedKnows Undocumented Immigrant  
+                                      -0.2179  </code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>lm_know</span> <span class='op'>|&gt;</span></span>
+<span><span class='fu'>broom</span><span class='fu'>::</span><span class='fu'><a href='https://generics.r-lib.org/reference/tidy.html'>tidy</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span><span class='fu'><a href='https://dplyr.tidyverse.org/reference/select.html'>select</a></span><span class='op'>(</span><span class='va'>term</span>, <span class='va'>estimate</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span><span class='fu'>knitr</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/knitr/man/kable.html'>kable</a></span><span class='op'>(</span>digits <span class='op'>=</span> <span class='fl'>2</span><span class='op'>)</span></span></code></pre>
+</div>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">term</th>
+<th style="text-align: right;">estimate</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">(Intercept)</td>
+<td style="text-align: right;">1.83</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Know_UndocumentedKnows Undocumented Immigrant</td>
+<td style="text-align: right;">-0.22</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The intercept is 1.4 which means that for the variable of knowing/not knowing an undocumented immigrant the survey response is predicted to be 1.4 in between very important goal and somewhat important. here is a casual effect because the coefficient on knowing an undocumented immigrant the variable is -0.22, which means that when a Latino knows someone undocumented their survey response is predicted to be about lower on average. Thus, when a Latino knows someone that is undocumented they are more likely to survey that establishing a way for most immigrants currently in the country illegally to stay in the United States legally is more of an important goal. This because a lower score means that the priority of the goal is higher. T</p>
+<h2 id="worrying-of-deportation-impacts-on-immigration-attitudes">Worrying of Deportation Impact’s on Immigration Attitudes</h2>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>latinos</span> <span class='op'>&lt;-</span> <span class='va'>latinos</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span></span>
+<span>    worry <span class='op'>=</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/case_when.html'>case_when</a></span><span class='op'>(</span></span>
+<span>      <span class='va'>WORRYDPORT_W86</span> <span class='op'>==</span> <span class='fl'>1</span> <span class='op'>~</span> <span class='st'>"A lot"</span>,</span>
+<span>      <span class='va'>WORRYDPORT_W86</span> <span class='op'>==</span> <span class='fl'>2</span> <span class='op'>~</span> <span class='st'>"Some"</span>,</span>
+<span>      <span class='va'>WORRYDPORT_W86</span> <span class='op'>==</span> <span class='fl'>3</span> <span class='op'>~</span> <span class='st'>"Not much"</span>,</span>
+<span>      <span class='va'>WORRYDPORT_W86</span> <span class='op'>==</span> <span class='fl'>4</span> <span class='op'>~</span><span class='st'>"Not at all"</span></span>
+<span>    <span class='op'>)</span></span>
+<span>    <span class='op'>)</span> </span>
+<span>       </span>
+<span><span class='va'>worry_table</span> <span class='op'>&lt;-</span> <span class='va'>latinos</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/group_by.html'>group_by</a></span><span class='op'>(</span><span class='va'>WORRYDPORT_W86</span>, <span class='va'>IMMVAL_c_W86</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/summarise.html'>summarize</a></span><span class='op'>(</span>n <span class='op'>=</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/context.html'>n</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span>prop <span class='op'>=</span> <span class='va'>n</span> <span class='op'>/</span><span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span><span class='op'>(</span><span class='va'>n</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/select.html'>select</a></span><span class='op'>(</span><span class='op'>-</span><span class='va'>n</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://tidyr.tidyverse.org/reference/pivot_wider.html'>pivot_wider</a></span><span class='op'>(</span>names_from <span class='op'>=</span> <span class='va'>WORRYDPORT_W86</span>, values_from <span class='op'>=</span> <span class='va'>prop</span></span>
+<span>  <span class='op'>)</span></span>
+<span><span class='fu'>knitr</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/knitr/man/kable.html'>kable</a></span><span class='op'>(</span><span class='va'>worry_table</span>, digits <span class='op'>=</span> <span class='fl'>2</span><span class='op'>)</span></span></code></pre>
+</div>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: right;">IMMVAL_c_W86</th>
+<th style="text-align: right;">1</th>
+<th style="text-align: right;">2</th>
+<th style="text-align: right;">3</th>
+<th style="text-align: right;">4</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0.81</td>
+<td style="text-align: right;">0.61</td>
+<td style="text-align: right;">0.46</td>
+<td style="text-align: right;">0.40</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0.16</td>
+<td style="text-align: right;">0.31</td>
+<td style="text-align: right;">0.41</td>
+<td style="text-align: right;">0.33</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">0.02</td>
+<td style="text-align: right;">0.06</td>
+<td style="text-align: right;">0.11</td>
+<td style="text-align: right;">0.15</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">0.01</td>
+<td style="text-align: right;">0.02</td>
+<td style="text-align: right;">0.02</td>
+<td style="text-align: right;">0.11</td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>worry_means</span> <span class='op'>&lt;-</span> <span class='va'>latinos</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/group_by.html'>group_by</a></span><span class='op'>(</span><span class='va'>worry</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/summarise.html'>summarize</a></span><span class='op'>(</span>IMMVAL_c_W86_worry <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>IMMVAL_c_W86</span><span class='op'>)</span><span class='op'>)</span></span>
+<span><span class='va'>worry_means</span></span></code></pre>
+</div>
+<pre><code># A tibble: 4 × 2
+  worry      IMMVAL_c_W86_worry
+  &lt;chr&gt;                   &lt;dbl&gt;
+1 A lot                    1.22
+2 Not at all               1.97
+3 Not much                 1.70
+4 Some                     1.48</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>worry_m_means</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/reshape2/man/melt.html'>melt</a></span><span class='op'>(</span><span class='va'>worry_means</span><span class='op'>)</span>                                     </span>
+<span><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='va'>worry_means</span><span class='op'>)</span>  </span></code></pre>
+</div>
+<pre><code># A tibble: 4 × 2
+  worry      IMMVAL_c_W86_worry
+  &lt;chr&gt;                   &lt;dbl&gt;
+1 A lot                    1.22
+2 Not at all               1.97
+3 Not much                 1.70
+4 Some                     1.48</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>worry_plot</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span>data <span class='op'>=</span> <span class='va'>worry_m_means</span>, mapping <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>worry</span>, y <span class='op'>=</span> <span class='va'>value</span>, fill <span class='op'>=</span> <span class='va'>worry</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_bar.html'>geom_col</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='st'>"Does Respondent Worry About a Loved One Being Deported"</span>,</span>
+<span>y <span class='op'>=</span> <span class='st'>"Average Survey Response to Immigration Question"</span><span class='op'>)</span> <span class='op'>+</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/theme.html'>theme</a></span><span class='op'>(</span>axis.text.x <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>element_text</a></span><span class='op'>(</span>size <span class='op'>=</span> <span class='fl'>6</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/theme.html'>theme</a></span><span class='op'>(</span>axis.title <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>element_text</a></span><span class='op'>(</span>size <span class='op'>=</span> <span class='fl'>10</span><span class='op'>)</span><span class='op'>)</span></span>
+<span><span class='va'>worry_plot</span></span></code></pre>
+</div>
+<p><img src="index_files/figure-html5/unnamed-chunk-6-1.png" width="624" /></p>
+</div>
+<p>The bar plot shows that the more a Latino worries about a loved one being deported the lower they will score the immigration question meaning that they are more likely to rank the goal of establishing a way for most immigrants currently in the country illegally to stay in the United States legally as more important. For those who worry a lot of a loved ones deportation, they are on average likely to rank the goal right below 1.25 meaning that it is a very important goal for them. For those who worry some of a loved ones deportation, they are on average likely to rank the goal right below 1.5 meaning that it is a between a very important or somewhat important goal for them. For those who worry not much of a loved ones deportation, they are on average likely to rank the goal right below 1.75 meaning they rank the goal lower than the other two groups. Those that not at all worry about a loved ones deportation are the group that is most likely to rank the goal the lowest in terms of priority.</p>
+<h2 id="final-results">Final Results</h2>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>data</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/utils/read.table.html'>read.table</a></span><span class='op'>(</span>text<span class='op'>=</span><span class='st'>"</span></span>
+<span><span class='st'>Variable, Avergae.Response.to.IMMVA.Q</span></span>
+<span><span class='st'>AfroLatino, 1.691318</span></span>
+<span><span class='st'>Not AfroLatino, 1.715743  </span></span>
+<span><span class='st'>Knows Undocu, 1.616111</span></span>
+<span><span class='st'>Does Not Know Undocu, 1.834022</span></span>
+<span><span class='st'>Worries A lot, 1.223553</span></span>
+<span><span class='st'>Worries Some, 1.481054</span></span>
+<span><span class='st'>Worries Not Much, 1.702060</span></span>
+<span><span class='st'>Worries Not at all, 1.973562"</span>, header<span class='op'>=</span><span class='cn'>TRUE</span>, sep<span class='op'>=</span><span class='st'>","</span><span class='op'>)</span></span>
+<span><span class='va'>data</span></span></code></pre>
+</div>
+<pre><code>              Variable Avergae.Response.to.IMMVA.Q
+1           AfroLatino                    1.691318
+2       Not AfroLatino                    1.715743
+3         Knows Undocu                    1.616111
+4 Does Not Know Undocu                    1.834022
+5        Worries A lot                    1.223553
+6         Worries Some                    1.481054
+7     Worries Not Much                    1.702060
+8   Worries Not at all                    1.973562</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>all_data_plot</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='va'>data</span>, <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>Variable</span>, y <span class='op'>=</span> <span class='va'>Avergae.Response.to.IMMVA.Q</span>, fill <span class='op'>=</span> <span class='va'>Variable</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>    <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_bar.html'>geom_bar</a></span><span class='op'>(</span>stat<span class='op'>=</span><span class='st'>"identity"</span>, position<span class='op'>=</span><span class='st'>"dodge"</span><span class='op'>)</span> <span class='op'>+</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/theme.html'>theme</a></span><span class='op'>(</span>axis.text.x <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>element_text</a></span><span class='op'>(</span>size <span class='op'>=</span> <span class='fl'>4</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='st'>"Different Variables"</span>,</span>
+<span>y <span class='op'>=</span> <span class='st'>"Average Survey Response to Immigration Question"</span>,</span>
+<span>title <span class='op'>=</span> <span class='st'>" Average Survey Responses to Immigration Question based on Different Variables"</span><span class='op'>)</span> <span class='op'>+</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/theme.html'>theme</a></span><span class='op'>(</span>plot.title <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>element_text</a></span><span class='op'>(</span>size <span class='op'>=</span> <span class='fl'>9</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/theme.html'>theme</a></span><span class='op'>(</span>axis.title <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>element_text</a></span><span class='op'>(</span>size <span class='op'>=</span> <span class='fl'>9</span><span class='op'>)</span><span class='op'>)</span></span>
+<span><span class='va'>all_data_plot</span></span></code></pre>
+</div>
+<img src="index_files/figure-html5/unnamed-chunk-7-1.png" width="624" />
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>all_data_scatter</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='va'>data</span>, <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>Variable</span>, y <span class='op'>=</span> <span class='va'>Avergae.Response.to.IMMVA.Q</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_point.html'>geom_point</a></span><span class='op'>(</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>colour <span class='op'>=</span> <span class='va'>Variable</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/theme.html'>theme</a></span><span class='op'>(</span>axis.text.x <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>element_text</a></span><span class='op'>(</span>size <span class='op'>=</span> <span class='fl'>5</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>   <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='st'>"Different Variables"</span>,</span>
+<span>y <span class='op'>=</span> <span class='st'>"Average Survey Response to Immigration Question"</span>,</span>
+<span>title <span class='op'>=</span> <span class='st'>"Average Survey Responses to Immigration Question based on Different Variables"</span><span class='op'>)</span> <span class='op'>+</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/theme.html'>theme</a></span><span class='op'>(</span>plot.title <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>element_text</a></span><span class='op'>(</span>size <span class='op'>=</span> <span class='fl'>9</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/theme.html'>theme</a></span><span class='op'>(</span>axis.title <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>element_text</a></span><span class='op'>(</span>size <span class='op'>=</span> <span class='fl'>9</span><span class='op'>)</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>all_data_scatter</span> </span></code></pre>
+</div>
+<p><img src="index_files/figure-html5/unnamed-chunk-7-2.png" width="624" /></p>
+</div>
+<p>As the bar plot and scatter plot show the attitudes of Latinos towards establishing a way for most immigrants currently in the country illegally to stay in the United States legally, based on the factors of knowing someone is undocumented, being AfroLatino, and worrying of a family member or close friend being deported. My hypothesis of knowing someone is undocumented or worrying of a family member or close friend being deported will result in a lower ranking of goal importance was proved true. This because those who knows an undocumented person ranked the goal lower than those who do not know an undocumented person and in this data set the lower the ranking the more important the goal is to the respondent. Similarly, those who worried more about a loved ones deportation also ranked the goal lower. On the other hand being AfroLatino vs not being AfroLatino had little to no impact on the respondents ranking proving my other hypothesis false.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Using the Pew Research Center’s American Trends Panel Wave 86, the National Survey of Latinos I was able to test my hypotheses. My first hypothesis was that the factors of knowing someone is undocumented, being AfroLatino, and worrying of a family member or close friend being deported would result in a lower ranking in the question of establishing a way for most immigrants currently in the country illegally to stay in the United States legally. The respondents would rank the goal on a scale of 1-4 with 1 meaning the respondent thought it was a very important goal, 2 meaning it was a somewhat important goal, 3 meaning it was a not too important goal, and 4 meaning it was not at all important goal. My second hypothesis was that being AfroLatino would result in a higher ranking than not being AfroLatino because predominantly black Latin America countries are not experiencing increases in immigration unlike countries from Central America, therefore immigration reform was not as big of importance. I was able to test both hypotheses. My first hypothesis was failed to be rejected and my second was rejected. Knowing an undocumented immigrant did result in a lower ranking than not knowing one. Similarly, the more worried the respondent was of a loved one being deported the lower the ranking of the goal. In contrast, being AfroLatino vs not being AfroLatino did not result in any major difference. One of the limitations of the data set was that it was a self conducted survey meaning that the survey could have been randomly filled out or not filled out honestly. In the future the study could be improved by asking the questions in person and including more identification factors like income level and gender.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
