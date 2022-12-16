@@ -1,7 +1,7 @@
 ---
 title: "Gov 50 Final Project"
 author: "Stephany Gutierrez"
-description: "My final project"
+description: "Latino Survey Responses to Immigration Importance Question"
 output:
   distill::distill_article:
     self_contained: false
@@ -68,12 +68,13 @@ latinos <- latinos |>
 
 latinos_plot <- latinos |>
   ggplot(aes(x = attitudes)) +
-  geom_bar() +
+  geom_bar(mapping = aes(fill = attitudes)) +
   labs(
     x = "Level of Importance",
     y = "Number of People who responded",
     title = "Latino's Attitudes Towards Establishing Pathway To Legal Immigration "
-  )
+  ) +
+  theme(axis.text.x = element_text(size = 5)) 
 latinos_plot
 
 attitudes_table <- latinos |>
@@ -83,7 +84,7 @@ knitr::kable(attitudes_table)
 
 ```
 
-1672 Latinos said they felt that establishing a way for most immigrants currently in the country illegally to stay in the United States legally was very important goal, 1,027 said it was a somewhat important goal and 350 said it was a not too important goal and 196 said it was not at all an important goal. Because there was 3,245 out of the 3375 Latinos surveyed answered this question that means that 51%, the majority of Latinos believe that establishing a way for most immigrants currently in the country illegally to stay in the United States legally was a very important goal.
+1672 Latinos said they felt that establishing a way for most immigrants currently in the country illegally to stay in the United States legally was very important goal, 1,027 said it was a somewhat important goal and 350 said it was a not too important goal and 196 said it was not at all an important goal. Because there was 3,245 out of the 3375 Latinos surveyed answered this question that means that 51%, the majority of Latinos believe that establishing a way for most immigrants currently in the country illegally to stay in the United States legally was a very important goal. Overall as a whole, Latinos either belived it was a somewhat or very important goal.
 
 
 
@@ -93,7 +94,7 @@ knitr::kable(attitudes_table)
 ## AfroLatino Idenity Impact on Immigration Attitudes
 ```{r}
 latinos <- latinos |>
-  mutate(`AfroLatino` = if_else(AFROLATINO_W86 == 1, "AfroLatino", "Not AfroLatin"))
+  mutate(`AfroLatino` = if_else(AFROLATINO_W86 == 1, "AfroLatino", "Not AfroLatino"))
 
 AfroLatino_table <- latinos |>
   group_by(AfroLatino, IMMVAL_c_W86) |>
@@ -126,7 +127,8 @@ There is little to no impact between Latinos and AfroLatino in terms of attitude
 ## Knowing Someone Undocumented Impact's on Immigration Attitudes
 ```{r}
 latinos <- latinos |>
-  mutate(`Know_Undocumented` = if_else(KNOWUNAUTH_W86 == 1, "Knows Undocumented Immigrant", "Does not Know Undocumented Immigrant"))
+  mutate(`Know_Undocumented` = if_else(KNOWUNAUTH_W86 == 1, "Knows Undocumented Immigrant", 
+                                       "Does not Know Undocumented Immigrant"))
        
 Know_table <- latinos |>
   group_by(KNOWUNAUTH_W86, IMMVAL_c_W86) |>
@@ -145,10 +147,12 @@ know_means
 know_m_means <- melt(know_means)                                     
 head(know_m_means)  
 
-plot_know <- ggplot(data = know_m_means, mapping = aes(x = Know_Undocumented, y = value, fill = Know_Undocumented)) +
+plot_know <- ggplot(data = know_m_means, mapping = aes(x = Know_Undocumented, 
+                                                       y = value, fill = Know_Undocumented)) +
 geom_col() +
   labs(x = "Does Respondent Know an Undocumented Immigrant",
-y = "Average Survey Response to Immigration Question") + theme(axis.text.x = element_text(size = 6))
+y = "Average Survey Response to Immigration Question") + 
+  theme(axis.text.x = element_text(size = 5))
 plot_know
 ```
 As can be seen the majority of those who know an undocumented immigrant believe that establishing a way for most immigrants currently in the country illegally to stay in the United States legally is a very important goal or a somewhat important goal. With 57% of Latinos who know an Undocumented Immigrant believing that  it is a very important goal. In contrast to only 45% of those who do not know an Undocumented Immigrant believing that it is a very important goal. Similar results can be seen in terms of attitude, with those who know an an undocumented immigrant thinking it is more of an important goal. Knowing an undocumented immigrant resulted in about .22 difference in means, meaning that those who knew someone that was undocumented on average gave a .22 lower score on the scale. In this case the lower the number on the scale, the higher ranked the goal is.
@@ -199,10 +203,13 @@ worry_means
 worry_m_means <- melt(worry_means)                                     
 head(worry_means)  
 
-worry_plot <- ggplot(data = worry_m_means, mapping = aes(x = worry, y = value, fill = worry)) +
+worry_plot <- ggplot(data = worry_m_means, mapping = aes(x = worry,
+                                                         y = value, fill = worry)) +
 geom_col() +
   labs(x = "Does Respondent Worry About a Loved One Being Deported",
-y = "Average Survey Response to Immigration Question") + theme(axis.text.x = element_text(size = 6)) + theme(axis.title = element_text(size = 10))
+y = "Average Survey Response to Immigration Question") + 
+  theme(axis.text.x = element_text(size = 6)) + 
+  theme(axis.title = element_text(size = 10))
 worry_plot
 ```
 The bar plot shows that the more a Latino worries about a loved one being deported the lower they will score the immigration question meaning that they are more likely to rank the goal of  establishing a way for most immigrants currently in the country illegally to stay in the United States legally as more important. For those who worry a lot of a loved ones deportation, they are on average likely to rank the goal right below 1.25 meaning that it is a very important goal for them. For those who worry some of a loved ones deportation, they are on average likely to rank the goal right below 1.5 meaning that it is a between a very important or somewhat important goal for them. For those who worry not much of a loved ones deportation, they are on average likely to rank the goal right below 1.75 meaning they rank the goal lower than the other two groups. Those that not at all worry about a loved ones deportation are the group that is most likely to rank the goal the lowest in terms of priority.
@@ -224,19 +231,29 @@ Worries Not at all, 1.973562", header=TRUE, sep=",")
 data
 
 
-all_data_plot <- ggplot(data, aes(x = Variable, y = Avergae.Response.to.IMMVA.Q, fill = Variable)) +
-    geom_bar(stat="identity", position="dodge") + theme(axis.text.x = element_text(size = 4)) +
+all_data_plot <- ggplot(data, aes(x = Variable, 
+                                  y = Avergae.Response.to.IMMVA.Q, fill = Variable)) +
+  geom_bar(stat="identity", 
+           position="dodge") + 
+  theme(axis.text.x = element_text(size = 4)) +
   labs(x = "Different Variables",
 y = "Average Survey Response to Immigration Question",
-title = " Average Survey Responses to Immigration Question based on Different Variables") + theme(plot.title = element_text(size = 9)) + theme(axis.title = element_text(size = 9))
+title = " Average Survey Responses to Immigration Question based
+on Different Variables") + 
+  theme(plot.title = element_text(size = 9)) +
+theme(axis.title = element_text(size = 9))
 all_data_plot
 
 
 all_data_scatter <- ggplot(data, aes(x = Variable, y = Avergae.Response.to.IMMVA.Q)) +
-  geom_point(aes(colour = Variable)) + theme(axis.text.x = element_text(size = 5)) +
+  geom_point(aes(colour = Variable)) + 
+  theme(axis.text.x = element_text(size = 4)) +
    labs(x = "Different Variables",
 y = "Average Survey Response to Immigration Question",
-title = "Average Survey Responses to Immigration Question based on Different Variables") + theme(plot.title = element_text(size = 9)) + theme(axis.title = element_text(size = 9))
+title = "Average Survey Responses to Immigration Question
+based on Different Variables") + 
+theme(plot.title = element_text(size = 9)) + 
+theme(axis.title = element_text(size = 9))
 
 all_data_scatter 
 ```
@@ -246,5 +263,5 @@ As the bar plot and scatter plot show the attitudes of Latinos towards establish
 
 ## Conclusion
 
-Using the Pew Research Center's American Trends Panel Wave 86, the National Survey of Latinos I was able to test my hypotheses. My first hypothesis was that the factors of knowing someone is undocumented, being AfroLatino, and worrying of a family member or close friend being deported would result in a lower ranking in the question of establishing a way for most immigrants currently in the country illegally to stay in the United States legally. The respondents would rank the goal on a scale of 1-4 with 1 meaning the respondent thought it was a very important goal, 2 meaning it was a somewhat important goal, 3 meaning it was a not too important goal, and 4 meaning it was not at all important goal. My second hypothesis was that being AfroLatino would result in  a higher ranking than not being AfroLatino because predominantly black Latin America countries are not experiencing increases in immigration unlike countries from Central America, therefore immigration reform was not as big of importance. I was able to test both hypotheses. My first hypothesis was failed to be rejected and my second was rejected. Knowing an undocumented immigrant did result in a lower ranking than not knowing one. Similarly, the more worried the respondent was of a loved one being deported the lower the ranking of the goal. In contrast, being AfroLatino vs not being AfroLatino did not result in any major difference.  One of the limitations of the data set was that it was a self conducted survey meaning that the survey could have been randomly filled out or not filled out honestly. In the future the study could be improved by asking the questions in person and including more identification factors like income level and gender. 
+Using the Pew Research Center's American Trends Panel Wave 86, the National Survey of Latinos I was able to test my hypotheses. My first hypothesis was that the factors of knowing someone is undocumented, being AfroLatino, and worrying of a family member or close friend being deported would result in a lower ranking in the question of establishing a way for most immigrants currently in the country illegally to stay in the United States legally. The respondents would rank the goal on a scale of 1-4 with 1 meaning the respondent thought it was a very important goal, 2 meaning it was a somewhat important goal, 3 meaning it was a not too important goal, and 4 meaning it was not at all important goal. My second hypothesis was that being AfroLatino would result in  a higher ranking than not being AfroLatino because predominantly black Latin America countries are not experiencing increases in immigration unlike countries from Central America, therefore immigration reform was not as big of importance. I was able to test both hypotheses. My first hypothesis was failed to be rejected and my second was rejected. Knowing an undocumented immigrant did result in a lower ranking than not knowing one. Similarly, the more worried the respondent was of a loved one being deported the lower the ranking of the goal. In contrast, being AfroLatino vs not being AfroLatino did not result in any major difference. One of the limitations of the data set was that it was a self conducted survey meaning that the survey could have been randomly filled out or not filled out honestly. In the future the study could be improved by asking the questions in person and including more identification factors like income level and gender. 
 
